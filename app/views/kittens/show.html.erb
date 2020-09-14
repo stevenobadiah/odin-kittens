@@ -1,0 +1,18 @@
+<h1><%= @kitten.name %></h1>
+
+<table id="kittens">
+    <tr>
+        <th>Age</th>
+        <th>Cuteness</th>
+        <th>Softness</th>
+    </tr>
+    <tr>
+        <td><%= @kitten.age %></td>
+        <td><%= @kitten.cuteness %></td>
+        <td><%= @kitten.softness %></td>
+    </tr>
+</table>
+
+<%= link_to "edit", edit_kitten_path(@kitten) %>
+<%= link_to "delete", kitten_path(@kitten), method: :delete, data: {confirm: "Really delete the kitten?"} %>
+<%= link_to "<< Back to Kittens List", root_path %>
